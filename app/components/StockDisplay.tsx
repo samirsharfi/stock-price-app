@@ -7,7 +7,7 @@ interface StockDisplayProps {
     return (
       <div>
         {error ? (
-          <p style={{ color: 'red' }}>{error}</p>
+          <p className="text-red-500">{error}</p>
         ) : (
           <p>Current Price: {price !== null ? `$${price.toFixed(2)}` : 'N/A'}</p>
         )}

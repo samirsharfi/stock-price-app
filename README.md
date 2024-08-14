@@ -2,35 +2,85 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+# Stock Price App
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+A Next.js application that allows users to search and retrieve real-time stock prices using the Finnhub API. The app also provides real-time updates via WebSocket for selected stock symbols.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Real-time Stock Search**: Search for stock prices using stock symbols like AAPL, TSLA, etc.
+- **WebSocket Integration**: Receive live updates for selected stocks.
+- **Error Handling**: Displays appropriate messages for invalid or non-existent stock symbols.
+- **Responsive UI**: Built with Material-UI to ensure a smooth user experience.
 
-## Learn More
+## Installation
 
-To learn more about Next.js, take a look at the following resources:
+### Prerequisites
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Node.js (v14 or above)
+- npm (v6 or above) or yarn
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Steps to Setup
 
-## Deploy on Vercel
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/yourusername/stock-price-app.git
+   cd stock-price-app
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+2. **Install dependencies**:
+
+- npm install
+- yarn install
+
+
+3. **Set up environment variables**:
+
+- Create a .env.local file in the root directory of your project.
+- Add your Finnhub API key to the environment file:
+
+NEXT_PUBLIC_FINNHUB_API_KEY=your_finnhub_api_key
+
+
+4. **Run the development server**:
+
+- npm run dev
+- yarn dev 
+
+
+5. **Open your browser**:
+
+Visit http://localhost:3000 to see the application running.
+
+
+
+
+## Usage
+
+- Search for a Stock: Enter a stock symbol (e.g., AAPL, TSLA) in the search bar and press "Search". The app will display the current stock price.
+
+
+## Project Structure
+
+- `pages/`: Contains the main page of the app.
+
+- `components/`: Contains reusable React components like StockSearch and StockDisplay.
+
+- `hooks/`: Custom React hooks for handling WebSocket connections.
+
+
+
+## API Integration
+
+
+- The application integrates with the Finnhub API to fetch real-time stock data.
+
+
+
+## Contact
+
+For questions or support, please reach out to sharfi.samir@gmail.com
+
+
+
