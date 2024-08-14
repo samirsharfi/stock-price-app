@@ -18,11 +18,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
-        <title>Stock Price App</title>
-        <meta name="description" content="Search for stock prices in real-time" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <body className={inter.className}><Navbar />{children}</body>
     </html>
   );
